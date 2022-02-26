@@ -12,7 +12,8 @@ const News = () => {
 
     useEffect(() => {
         dispatch(getNews({news}))
-    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    },[]);
 
 
 
