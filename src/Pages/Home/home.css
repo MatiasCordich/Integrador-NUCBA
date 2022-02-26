@@ -1,0 +1,73 @@
+@import '../../Variables/variables.css';
+
+.main{
+    height: 100%;
+}
+
+.main,
+.main__content,
+.main__content-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.main__title{
+    font-size: 4.5rem;
+    color: var(--blue);
+    font-weight: 800;
+    text-align: center;
+    line-height: 6.5rem;
+    padding: 1rem;
+}
+
+
+.main__content-text p {
+    font-weight: 600;
+    line-height: 4.5rem;
+    padding: 1.5rem;
+}
+
+.register__btn {
+    color: var(--white);
+    font-weight: 700;
+    border: 1px solid var(--blue);
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    background-color:#041e42b6;
+    padding: 1rem 2rem;
+    border-radius: .2rem;
+}
+
+.register__btn:hover{
+    background-color: var(--blue);
+    color: var(--white);
+    transition: all .6s;
+}
+
+@media (min-width: 990px) {
+
+    .main__title{
+        width: 65%;
+    }
+
+    .main__content {
+        flex-direction: row;
+    }
+
+    .main__content-text{
+        width: 50%;
+    }
+
+    .main__content-text p{
+        font-size: 2rem;
+        line-height: 5.5rem;
+    }
+
+    .lottie{
+        width: 35rem;
+        height: 35rem;
+    }
+}

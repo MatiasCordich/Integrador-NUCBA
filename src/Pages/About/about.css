@@ -1,0 +1,89 @@
+@import '../../Variables/variables.css';
+
+.about{
+    display: flex;
+    flex-direction: column;
+    gap: 4.5rem;
+}
+
+.about__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4.5rem;
+}
+
+.about__content-files{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.about__content-title{
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: var(--blue);
+    padding: 2rem;
+}
+
+.about__content-text{
+    padding: 2rem;
+    line-height: 4.5rem;
+    font-weight: 400;
+}
+
+.about__content-btnApp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.apple-btn{
+    background-image: url(./apple.png);
+    width: 16.4rem;
+    height: 5rem;
+}
+
+.android-btn{
+    background-image: url(./googlePlay.png);
+    width: 19rem;
+    height: 5.5rem;
+}
+
+.apple-btn,
+.android-btn{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    
+}
+
+@media (min-width: 990px) {
+
+    .about__content{
+        margin: 5rem 0;
+    }
+
+    .about__content-files{
+        flex-direction: row;
+    }
+
+    .about__content-text{
+        width: 50%;
+    }
+
+    .widther{
+        width: 90%;
+    }
+
+    .about__content-btnApp{
+        flex-direction: row;
+    }
+
+    .about__content-title{
+        font-size: 6rem;
+    }
+}

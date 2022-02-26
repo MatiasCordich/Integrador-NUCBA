@@ -1,0 +1,128 @@
+@import '../../Variables/variables.css';
+
+.header{
+    height: 10rem;
+}
+
+.header__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+.header__content-logo-name{
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.header__content-btnopen button {
+    background: none;
+    border: none;
+}
+
+.header__content i {
+    padding: 1rem;
+    font-size: 2.5rem;
+}
+
+.fa-bars{
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 100%;
+}
+
+.navbar__close-btn{
+    display: none;
+}
+
+.disabled{
+    transition: all .6s;
+    transform: translate(-100%);
+    visibility: hidden;
+}
+
+.navbar{
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    top: 0;
+    height: 100vh;
+}
+
+.navbar__links{
+    height: 100%;
+    transition: all .6s;
+    background-color: var(--blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 2rem;
+}
+
+.navbar__links-link > *{
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: .2rem;
+    color: var(--white);
+}
+
+.navbar__links-btn > * {
+    font-weight: 500;
+    border-radius: .6rem;
+    padding: .5rem 1rem;
+    letter-spacing: .2rem;
+    background-color: #fafafa38;
+    color: var(--white);
+}
+
+.navbar__links-btn{
+    color: var(--white);
+}
+
+.btn-login{
+    background-color: var(--white);
+    color: var(--blue);
+}
+
+.btn-logout{
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+    font-weight: 300;
+}
+
+.btn-login:hover{
+    background-color: var(--blue);
+    color: var(--white);
+    transition: all .6s;
+}
+
+.btn-register:hover{
+    background: var(--white);
+    color: var(--blue);
+    transition: all .6s;
+}
+
+@media (min-width: 990px) {
+    .navbar{
+        top: 0;
+        right: 35rem; 
+    }
+
+    .navbar__links{
+        background-color: #041e42b9;;
+    }
+
+    .navbar__links-link,
+    .navbar__links-btn{
+        font-size: 2.5rem;
+    }
+
+
+}

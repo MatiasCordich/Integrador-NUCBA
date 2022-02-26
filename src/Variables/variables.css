@@ -1,0 +1,7 @@
+@import './font.css';
+
+:root{
+    --bodyFont: 'Nunito Sans', sans-serif;
+    --blue: #041e42;
+    --white: #fafafa;
+}
