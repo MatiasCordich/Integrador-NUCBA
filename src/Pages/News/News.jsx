@@ -12,7 +12,7 @@ const News = () => {
 
     useEffect(() => {
         dispatch(getNews({news}))
-    }, []);
+    });
 
 
 
