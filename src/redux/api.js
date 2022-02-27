@@ -2,7 +2,7 @@ import axios from 'axios'
 
 // ApiKey de la API
 
-const API_KEY = '464d1d8835b74a2491ca59d17c9e8585'
+const API_KEY = 'ZBfbj0kgYNPSu7l9a3mClxkRYRxNzUNFUZu_kpj4Y_cTMcXD'
 
 // Valores iniciales
 
@@ -23,9 +23,9 @@ export default function newsReducer( state = defaultValue, {type, payload}) {
 
 export const getNews = () => async (dispatch) => {
     try {
-       const res = await axios.get(`https://newsapi.org/v2/top-headlines?country=ar&apiKey=${API_KEY}`)
+       const res = await axios.get(`https://api.currentsapi.services/v1/latest-news?country=ar&language=es&apiKey=${API_KEY}`)
 
-       const data = res.data.articles
+       const data = res.data.news
 
        console.log(data)
 
