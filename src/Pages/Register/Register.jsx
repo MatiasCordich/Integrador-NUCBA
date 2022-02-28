@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 import { registerAction } from '../../redux/register';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import persons from './urban-line-487.png'
 
 const Register = () => {
 
@@ -37,7 +38,15 @@ const Register = () => {
 
   return(
       <div className='register-container'>
-        <div className='register__section-1'></div>
+        <div className='register__section-1'>
+          <h1>Sé parte de nuestra comunidad.</h1>
+          <div className='register__section-content'>
+            <p>Registrate y mantenete informado/a de lo que pasa en el mundo.</p>
+            <div className='content__image'>
+              <img className='register-img' src={persons} alt="persons-img" />
+            </div>
+          </div>
+        </div>
         <form className='register'>
           <div className='register__section-2'>
             <div className='register__image'>

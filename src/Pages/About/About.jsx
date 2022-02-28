@@ -26,6 +26,7 @@ const About = () => {
             </div>
             <p className='about__content-text'>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum beatae unde commodi vel dolorem harum tempora labore, earum saepe reprehenderit eos error quo, deserunt officiis! Reprehenderit dolor commodi fugit aliquam.
+              <a className='btn_api' href="https://currentsapi.services/en" target="__blank">Nuestra API</a>
             </p>
           </div>  
         </div>

@@ -5,6 +5,7 @@ import './login.css'
 import { loginAction } from '../../redux/auth';
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import computer from './urban-line-man-with-coffee-to-go-sits-in-office-chair-and-works-on-laptop-with-several-parcels-around-him.png'
 
 
 
@@ -33,7 +34,7 @@ const Login = () => {
 
 
   return(
-      <div className='login__container'>
+      <div className='login__container' >
         <form className='login'>
           <div className='login__content-1'>
             <div className='login__img'>
@@ -79,7 +80,16 @@ const Login = () => {
           
         </form>
 
-        <div className='login__content-4'></div>
+        <div className='login__content-4'>
+          <h2 className='login__content-title'>Bienvenido/a</h2>
+          <div className='login__content-files'>
+            <h3 className='login__content-subtitle'>Mantente informado/a a un click de distancia</h3>
+            <div className='content-image'>
+              <img className='login-img' src={computer} alt="computer-img" />
+            </div>
+          </div>
+          <button className='password_btn' type='button'>¿Olvidaste la contraseña?</button>
+        </div>
 
         <ToastContainer />
 
