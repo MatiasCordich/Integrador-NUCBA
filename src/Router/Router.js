@@ -16,7 +16,7 @@ const Router = () => {
     <BrowserRouter>
         <Navbar/>
         <Routes>
-            {token && <Route path='/home' element={<Home/>}/>}             
+            <Route path='/home' element={<Home/>}/>          
             {token && <Route path='/about' element={<About/>}/>}
             {token && <Route path='/news' element={<News/>}/>}
             {token && <Route path='*' element={<Navigate to='/home'/>}/>}          

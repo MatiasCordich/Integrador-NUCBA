@@ -6,6 +6,7 @@
 
 .main,
 .main__content,
+.main__content-2,
 .main__content-text{
     display: flex;
     justify-content: center;
@@ -15,12 +16,28 @@
 }
 
 .main__title{
-    font-size: 4.5rem;
+    font-size: 4rem;
     color: var(--blue);
-    font-weight: 800;
-    text-align: center;
+    font-weight: 900;
+    text-align:left;
     line-height: 6.5rem;
-    padding: 1rem;
+    padding: 1rem; 
+}
+
+.main__image{
+    background-color: var(--blue);
+    display: flex;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    max-width: 30rem;
+    height: 30rem;
+    width: 100%;   
+}
+
+.image-gl{
+    object-fit: cover;
+    width: 100%;
 }
 
 
@@ -47,14 +64,31 @@
     transition: all .6s;
 }
 
+.main__subtitle{
+    color: var(--blue);
+    font-size: 4rem;
+    font-weight: 900;
+    padding: 1rem;
+}
+
+
+
 @media (min-width: 990px) {
 
-    .main__title{
-        width: 65%;
+    .main__title,
+    .main__subtitle{
+        font-size: 7rem;
+        width: 89%;
+        line-height: 8rem;
+        margin: 5rem 0;
     }
 
     .main__content {
         flex-direction: row;
+    }
+
+    .main__content-2{
+        flex-direction: row-reverse;
     }
 
     .main__content-text{
@@ -64,10 +98,5 @@
     .main__content-text p{
         font-size: 2rem;
         line-height: 5.5rem;
-    }
-
-    .lottie{
-        width: 35rem;
-        height: 35rem;
     }
 }

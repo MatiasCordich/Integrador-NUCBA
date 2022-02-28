@@ -1,5 +1,9 @@
 @import '../../Variables/variables';
 
+.register-container{
+    margin-top: 5rem;
+}
+
 
 .register__section-1{
     display: none;
@@ -98,6 +102,26 @@
     text-align: center;
 }
 
+.success-toast-register{
+    margin: 0 auto;
+    width: 95%;
+    background: var(--green);
+    border: 1px solid var(--black-green);
+    color: var(--black-green)
+}
+
+.error-toast-register{
+    margin: 0 auto;
+    width: 95%;
+    background: var(--pink);
+    border: 1px solid var(--red);
+    color: var(--red);
+}
+
+.Toastify__close-button {
+    color: var(--grey);
+}
+
 @media (min-width: 990px) {
 
     .register-container{
@@ -118,5 +142,13 @@
         width: 80%;
         height: 71.9rem;
         background: var(--blue);
+    }
+
+    .error-toast-register{
+        width: 100%;
+    }
+
+    .success-toast-register{
+        width: 100%;
     }
 }

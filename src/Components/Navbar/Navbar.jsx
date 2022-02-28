@@ -27,7 +27,7 @@ const Navbar = () => {
         <div className='header__content'>
           <div className='header__content-logo'>
             <h2 className='header__content-logo-name' >
-              <i className="far fa-newspaper"></i>News Api
+            <img className='icon' src="https://img.icons8.com/external-wanicon-lineal-wanicon/50/fafafa/external-live-news-communication-wanicon-lineal-wanicon.png" alt='news-icon'/>News Api
             </h2>
           </div>
           <div className='header__content-btnopen'>

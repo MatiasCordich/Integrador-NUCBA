@@ -3,7 +3,7 @@ import { useState } from 'react'
 import './register.css'
 import { useDispatch } from 'react-redux';
 import { registerAction } from '../../redux/register';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
@@ -32,8 +32,9 @@ const Register = () => {
   }
 
   const onRegister = () => {
-    dispatch(registerAction( {name, lastName, email, password}))
+    dispatch(registerAction( {name, lastName, email, password}))    
   }
+
   return(
       <div className='register-container'>
         <div className='register__section-1'></div>
@@ -92,7 +93,9 @@ const Register = () => {
             <p>Ya tenes una cuenta? <Link className='btn__register' to='/login'>Log In</Link> </p>
           </div>
         </form>
-        <ToastContainer />
+
+        <ToastContainer/>
+    
       </div>
   );
 };

@@ -3,6 +3,8 @@ import { useState } from 'react'
 import { useDispatch} from 'react-redux'
 import './login.css'
 import { loginAction } from '../../redux/auth';
+import { ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -12,6 +14,8 @@ const Login = () => {
   const [ password, setPassword] = useState('')
 
   const dispatch = useDispatch()
+
+
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value)
@@ -23,7 +27,9 @@ const Login = () => {
 
   const onLogin = () => {
     dispatch(loginAction( {email, password}))
+       
   }
+
 
 
   return(
@@ -72,9 +78,11 @@ const Login = () => {
           <p>Nuevo? <Link className='btn__register' to='/register'>Registrarse</Link></p>
           
         </form>
-        <div className='login__content-4'>
-      
-        </div>
+
+        <div className='login__content-4'></div>
+
+        <ToastContainer />
+
       </div>
   );
 };

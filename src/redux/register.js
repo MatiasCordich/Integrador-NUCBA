@@ -1,4 +1,5 @@
 import axios from "axios";
+import { toast } from "react-toastify";
 
 const defaultValue = {
   userInfo: {},
@@ -24,7 +25,7 @@ export default function RegisterReducer(state = defaultValue,{ type, payload }) 
 }
 
 export const registerAction =
-  ({ email, password, name, lastName }) =>
+  ({ email, password, name, lastName}) =>
   async (dispatch) => {
     try {
       const res = await axios.post(
@@ -41,9 +42,27 @@ export const registerAction =
         payload: res.data.token,
         token: localStorage.setItem("token", res.data.token),
       });
+      toast.success('Usuario creado exitosamente', {
+        className: "success-toast-register",
+        position: "bottom-right",
+        autoClose: false,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        });
     } catch (error) {
-      dispatch({
-        type: ERROR,
-      });
+      dispatch({type: ERROR});
+      toast.error('Usuario existente', {
+        className: "error-toast-register",
+        position: "bottom-right",
+        autoClose: false,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+      })
     }
   }

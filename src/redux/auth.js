@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { toast } from "react-toastify";
 
 const defaultValue = {
   userInfo: {},
@@ -39,9 +40,29 @@ export const loginAction = ({ email, password }) => async (dispatch) => {
       dispatch({
         type: ERROR,
       });
+      toast.error('Contraseña o Email inválido', {
+        className: 'error-toast-register',
+        position: "bottom-left",
+        autoClose: false,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+      })
     }
 };
 
 export const logoutAction = () => dispatch => {
     dispatch({type: LOGOUT})
+    toast.success('Te has deslogueado', {
+      className:'success-toast-register',
+      position: "bottom-right",
+      autoClose: false,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      });
 }
